@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a{
+  color: #0080d4;
+}
+
+a:hover{
+  opacity: .7;
+}
+
+.faded-paragraph {
+  color: #6F6E6E;
+}
+
+.primary-header {
+  font-size: 2.4rem;
+  position: relative;
+  font-weight: 500;
+}
+
+.primary-header::before{
+  content: "";
+  position: absolute;
+  left: -120px;
+  bottom: 0;
+  height: 5px;
+  width: 100px;
+  background-color: #45B373;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* .home,
+.services,
+.products,
+.sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.services {
+  background-image: url("assets/images/mobile-solution.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.products {
+  background-image: url("assets/images/pima-covid.png");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.sign-up {
+  background-image: url("assets/images/scorecard.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+} */
+
+
+@media (max-width: 767px) {
+  .primary-header {
+    font-size: 2rem;
+    left: 50px;
+  }
+  
+  .primary-header::before{
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    height: 5px;
+    width: 50px;
+  }
+}
+

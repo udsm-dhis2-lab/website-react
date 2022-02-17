@@ -1,0 +1,6 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}

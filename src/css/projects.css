@@ -1,0 +1,38 @@
+.projects .showcase {
+    margin: 3rem 0;
+    gap: 2rem;
+}
+
+.projects .showcase .inner-showcase{
+    gap: 2rem;
+}
+
+.projects .showcase .project {
+    width: 100%;
+    max-width: 350px;
+}
+
+.projects .showcase .project p {
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+.projects .showcase .project p a{
+   margin-top: 1rem;
+   display: inline-block;
+}
+
+.projects .showcase .project-card{
+    border: 1px solid lightgray;
+    /* background-color: #E5E5E5; */
+}
+
+@media screen and (max-width: 767px){
+    .projects .showcase .inner-showcase{
+        margin-top: 2rem;
+    }
+    .projects .showcase .project {
+        width: 100%;
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,150 @@
+* {
+  top: 0;
+  bottom: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+b {
+  color: #45b373;
+}
+
+.home-container {
+  padding: 5rem 0;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.tag-line-div {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.tag-line-div h1 {
+  width: 90%;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.tag-line-section-2 {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 6rem auto 3rem; 
+}
+
+.tag-line-section-2::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -15%;
+  max-width: 30%;
+  width: 400px;
+  height: 100%;
+  background-color: rgb(233, 232, 232);
+}
+
+.tag-line-section-2-div-2 {
+  position: relative;
+  left: calc( -15% + 400px );
+  margin-left: 2rem;
+  width: 60%;
+}
+
+.tag-line-section-2-div-2 > p {
+  font-size: 22px;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.banner-img{
+  position: absolute;
+  right: -5%;
+  top: 15%;
+}
+
+@media (max-width: 1600px) {
+  .tag-line-div h1 {
+    width: 70%;
+  }
+  
+  .tag-line-section-2::before {
+    width: 200px;
+  }
+  
+  .tag-line-section-2-div-2 {
+    left: calc( -15% + 200px );
+    width: 60%;
+  }
+  
+  .banner-img{
+    right: -10%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .tag-line-div h1 {
+    width: 70%;
+  }
+  
+  .tag-line-section-2-div-2 {
+    left: calc( -15% + 200px );
+    width: 50%;
+  }
+  
+  .banner-img{
+    right: -20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .tag-line-div h1 {
+    width: 70%;
+  }
+  
+  .tag-line-section-2::before {
+    width: 150px;
+  }
+  
+  .tag-line-section-2-div-2 {
+    left: calc( -15% + 150px );
+    width: 60%;
+  }
+  
+  .banner-img{
+    right: -30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-container{
+    padding: 3rem 0;
+  }
+  .tag-line-div h1 {
+    width: 100%;
+    font-size: 32px;
+  }
+  .tag-line-section-2{
+    margin: 3rem auto 2rem;
+  }
+
+  .tag-line-section-2-div-2 > p {
+    font-size: 20px;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .tag-line-section-2::before {
+    width: 70px;
+  }
+  .tag-line-section-2-div-2 {
+    left: calc( -15% + 70px );
+    width: calc( 110% - 70px );
+  }
+  .banner-img {
+    display: none;
+  }
+}
