@@ -1,0 +1,82 @@
+.services{
+    margin: 6rem 0 3rem;
+
+}
+
+.services .title-container {
+    margin-bottom: 3rem;
+}
+
+.services .showcase .service{
+    width: 100%;
+    max-width: 350px;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.services .showcase .service-card{
+    gap: 2rem;
+    padding: 0;
+    display: flex;
+}
+
+.services .showcase .service-card .icon{
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.services .showcase .service .faded-paragraph{
+    font-size: 20px;
+    line-height: 2rem;
+    color: #0080d4;
+}
+
+.services .inner-showcase{
+    width: 70%;
+    gap: 3rem;
+}
+
+.services .showcase .service .main-body h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.services .showcase .service .main-body p {
+    font-size: 16px;
+    color: #6F6E6E;
+}
+
+@media screen and (max-width: 1400px){
+    .services .showcase .service-title {
+        width: 30%;
+    }
+    .services .showcase .service-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .services .showcase .service-title {
+        width: 30%;
+    }
+    .services .showcase .service-card {
+        min-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .services .showcase .inner-showcase{
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .services .showcase .service {
+        width: 100%;
+        min-width: 100%;
+        padding: 0;
+    }
+}

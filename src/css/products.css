@@ -1,0 +1,7 @@
+.container {
+  position: relative;
+}
+.line {
+  border: 5px solid #45b373;
+  transform: rotate(180deg);
+}

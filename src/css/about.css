@@ -1,0 +1,29 @@
+.about{
+    padding: 3rem 0;
+}
+
+.about .container{
+    width: 70%;
+    max-width: 1000px;
+    padding: 3rem 0 0;
+}
+
+.about .container h2{
+    margin-bottom: 2rem;
+}
+
+.about .container p{
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    .about .container{
+        width: 90%;
+    }
+
+    .about .container p{
+        font-size: 16px;
+        line-height: 1.8rem;
+    }
+}
