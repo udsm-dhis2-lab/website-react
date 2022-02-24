@@ -1,105 +1,110 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import '../css/navbar.css';
 import { Button } from './button';
 
 export const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
+  const closeMobileMenu = () => setOpen(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-  window.addEventListener('resize', showButton);
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
           <div>
-            <Link to="/" className="navbar-logo">
+            <NavLink to="/" onClick={closeMobileMenu} className="navbar-logo">
               <img src={logo} alt="logo" width={50} height={50} />
               <p>UDSM DHIS2 Project™</p>
-            </Link>
+            </NavLink>
           </div>
           <div>
-            <ul>
-              <li className="menu-icon" onClick={handleClick}>
-                <p>{click ? <FaTimes /> : <FaBars />}</p>
-              </li>
+            <button onClick={handleOpen} className="menu-icon">
+              {open ? (
+                <FaTimes className="icon" />
+              ) : (
+                <FaBars className="icon" />
+              )}
+            </button>
+            <ul className={open ? 'open' : ''}>
               <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/#/about"
+                <NavLink
+                  activeclassname="active"
+                  to="/"
                   className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/about"
+                  className="nav-links"
+                  activeclassname="active"
                   onClick={closeMobileMenu}
                 >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/#/team"
+                <NavLink
+                  to="/team"
                   className="nav-links"
+                  activeclassname="active"
                   onClick={closeMobileMenu}
                 >
                   Team
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/#/publications"
+                <NavLink
+                  to="/publications"
                   className="nav-links"
+                  activeclassname="active"
                   onClick={closeMobileMenu}
                 >
                   Publications
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/#/projects"
+                <NavLink
+                  to="/projects"
                   className="nav-links"
+                  activeclassname="active"
                   onClick={closeMobileMenu}
                 >
                   Projects
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/#/innovations"
+                <NavLink
+                  to="/innovations"
                   className="nav-links"
+                  activeclassname="active"
                   onClick={closeMobileMenu}
                 >
                   Innovations
-                </Link>
+                </NavLink>
               </li>
-              {!button && (
-                <li className="nav-item">
-                  <Link
-                    to="/#/club"
-                    className="nav-links-mobile"
-                    onClick={closeMobileMenu}
-                  >
-                    DHIS2 Club
-                  </Link>
-                </li>
-              )}
-              {button && (
-                <Button buttonStyle="btn-outline" navigationUrl="/#/club">
+              <li className="nav-item nav-item-mobile">
+                <NavLink
+                  activeclassname="active"
+                  to="/club"
+                  className="nav-links"
+                  activeclassname="active"
+                  onClick={closeMobileMenu}
+                >
+                  DHIS2 Club
+                </NavLink>
+              </li>
+              <li className="nav-item-desktop">
+                <Button buttonStyle="btn-outline" navigationUrl="/club">
                   DHIS2 Club
                 </Button>
-              )}
+              </li>
             </ul>
           </div>
         </div>

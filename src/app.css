@@ -9,7 +9,11 @@
 
 body {
   overflow-x: hidden;
-  width: 100%;
+  width: 100vw;
+}
+
+button:focus, input:focus{
+  outline: none !important;
 }
 
 a{
@@ -28,6 +32,7 @@ a:hover{
   font-size: 2.4rem;
   position: relative;
   font-weight: 500;
+  max-width: 100vw;
 }
 
 .primary-header::before{
@@ -47,49 +52,11 @@ a:hover{
   margin: 0 auto;
 }
 
-/* .home,
-.services,
-.products,
-.sign-up {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.services {
-  background-image: url("assets/images/mobile-solution.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.products {
-  background-image: url("assets/images/pima-covid.png");
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  background-image: url("assets/images/scorecard.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-} */
-
-
 @media (max-width: 767px) {
   .primary-header {
-    font-size: 2rem;
+    font-size: 1.5rem;
     left: 50px;
+    width: calc( 100% - 50px );
   }
   
   .primary-header::before{

@@ -5,11 +5,12 @@
 
 .projects .showcase .inner-showcase{
     gap: 2rem;
+    max-width: 65%;
 }
 
 .projects .showcase .project {
-    width: 100%;
-    max-width: 350px;
+    width: 30%;
+    min-width: 350px;
 }
 
 .projects .showcase .project p {
@@ -24,12 +25,56 @@
 
 .projects .showcase .project-card{
     border: 1px solid lightgray;
-    /* background-color: #E5E5E5; */
+    transition: .25s;
+}
+
+.projects .showcase .project-card:hover{
+    border: 1px solid #0080d4;
+}
+
+@media screen and (max-width: 1400px){
+    .projects .showcase .project.project-title{
+        width: 28%;
+    }
+    .projects .showcase .inner-showcase{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .projects .showcase .project {
+        width: 45%;
+        min-width: 250px;
+    }
+    .projects .showcase .project.project-title{
+        width: 30%;
+    }
+    .projects .showcase .inner-showcase{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .projects .showcase .project {
+        width: 100%;
+        min-width: 200px;
+    }
+    .projects .showcase .project.project-title{
+        width: 35%;
+    }
+    .projects .showcase .inner-showcase{
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 767px){
     .projects .showcase .inner-showcase{
         margin-top: 2rem;
+        width: 100%;
+        min-width: 100%;
+    }
+    .projects .showcase .project.project-title{
+        width: 100%;
     }
     .projects .showcase .project {
         width: 100%;

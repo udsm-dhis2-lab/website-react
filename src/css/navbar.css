@@ -1,13 +1,11 @@
-* {
-  top: 0;
-  bottom: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
 
 .navbar {
   height: 80px;
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  z-index: 2;
+  border-bottom: 1px solid rgb(233, 232, 232);
 }
 
 .navbar-container {
@@ -26,7 +24,7 @@
 }
 
 .navbar-logo > p {
-  margin-left: 1rem;
+  margin-left: .7rem;
 }
 
 .navbar-container {
@@ -35,30 +33,31 @@
   align-items: center;
 }
 
-ul {
+.navbar ul {
   display: flex;
   align-items: center;
-  text-decoration: none;
+  justify-content: flex-end;
   list-style: none;
 }
 
-li a {
-  text-decoration: none;
-  list-style: none;
-  color: black;
+.navbar li {
+  margin-left: 1.5rem;
 }
 
-.nav-item {
-  text-decoration: none;
-  color: black;
-  padding: 0 1rem;
+.navbar li a {
+  color: rgb(94, 93, 93);
+  position: relative;
 }
 
-ul li:after {
+.navbar li a.active{
+  color: #0080d4;
+}
+
+.navbar ul li a:after {
   content: '';
   width: 0%;
   height: 2px;
-  background-color: #f44336;
+  background-color: #0080d4;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -68,30 +67,76 @@ ul li:after {
   display: none;
 }
 
-ul li:hover::after {
+.navbar ul li a:hover::after {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  .navbar-logo > p {
-    display: none;
-  }
-  ul {
-    display: block;
-    text-decoration: none;
-    list-style: none;
-  }
-  li {
-    display: none;
+.nav-item-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {    
+  .navbar li {
+    margin: 1rem;
   }
   .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {    
+  .navbar-logo p {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar{
+    height: 60px;
+  }
+  .navbar-container {
+    z-index: 3;
+    background-color: white;
+  }
+  .nav-item-mobile{
     display: block;
-    margin: 0 12px;
-    cursor: pointer;
-    /* display: none; */
+  }
+  
+  .nav-item-desktop{
+    display: none;
+  }
+.navbar ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5%;
+    height: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid rgb(233, 232, 232);
+    transition: .25s;
+    z-index: 2;
+    overflow: hidden;
   }
 
-  ul li:hover::after {
-    width: 0%;
+  .navbar ul.open {
+    height: 420px;
+    overflow-y: auto;
+  }
+
+  .menu-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 12px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .menu-icon .icon {
+    font-size: 24px;
   }
 }
